@@ -1,0 +1,265 @@
+body {
+    max-width: 750px;
+    margin: auto;
+    font-family: "Courier New", monospace;
+    padding: 20px 20px 20px 80px;
+    background-color: #1c2333;
+    color: #c8c8c8;
+}
+
+nav {
+    border-top: 2px solid #00b4b4;
+    border-bottom: 2px solid #00b4b4;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #00b4b4;
+    letter-spacing: 0.05em;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+h1 {
+    font-family: "Courier New", monospace;
+    font-size: 2.5em;
+    color: #00b4b4;
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 1.4em;
+    color: #00b4b4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #00b4b4;
+    padding-bottom: 4px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #00b4b4;
+    margin: 20px 0;
+}
+
+a {
+    color: #00b4b4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+form input,
+form textarea {
+    background-color: #1a1a1f;
+    border: 1px solid #00b4b4;
+    color: #c8c8c8;
+    padding: 8px;
+    width: 100%;
+    font-family: "Courier New", monospace;
+    margin-top: 5px;
+}
+
+form button {
+    background-color: #00b4b4;
+    color: #0d0d0f;
+    border: none;
+    padding: 10px 20px;
+    font-family: "Racing Sans One", sans-serif;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #ffffff;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+
+.social-link {
+    text-decoration: none;
+}
+
+.social-link:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+body.cover {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-image: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 180, 180, 0.03) 2px,
+            rgba(0, 180, 180, 0.03) 4px);
+}
+
+.cover-wrap {
+    text-align: center;
+    padding: 2rem;
+}
+
+.cover-url {
+    color: #00b4b4;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+.cover-name-first {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    color: #00b4b4;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.cover-name-last {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    color: #c8c8c8;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.cover-line {
+    width: 60px;
+    height: 1px;
+    background: #00b4b4;
+    margin: 0 auto 2rem;
+}
+
+.cover-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    border: none;
+    padding: 0;
+    margin-bottom: 2.5rem;
+}
+
+.cover-nav a {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.cover-dots {
+    color: #00b4b4;
+    opacity: 0.4;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+        repeating-linear-gradient(0deg,
+            transparent,
+            transparent 40px,
+            rgba(0, 180, 180, 0.06) 40px,
+            rgba(0, 180, 180, 0.06) 41px),
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 40px,
+            rgba(0, 180, 180, 0.06) 40px,
+            rgba(0, 180, 180, 0.06) 41px);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 66px;
+    pointer-events: none;
+    z-index: 999;
+    background: repeating-linear-gradient(to bottom,
+            #00b4b4 0px,
+            #00b4b4 10px,
+            transparent 10px,
+            transparent 24px);
+    opacity: 0.3;
+}
+
+.side-panel {
+    position: fixed;
+    right: 7px;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    z-index: 999;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.side-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: rgba(0, 180, 180, 0.2);
+}
+
+.side-panel span {
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(0, 180, 180, 0.5);
+    transform: rotate(45deg);
+    display: block;
+    z-index: 1;
+    background: #1c2333;
+}
+
+.side-logo {
+    position: fixed;
+    left: -40px;
+    top: -60px;
+    width: 500px;
+    opacity: 0.85;
+    z-index: 999;
+    pointer-events: none;
+}
