@@ -325,7 +325,7 @@ body::after {
 
     .cover-nav {
         gap: 1.2rem;
-        margin-top: 2rem !important;
+        margin-top: 4rem !important;
     }
     .cover-tagline {
         display: none;
