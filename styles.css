@@ -270,7 +270,7 @@ body::after {
     .side-logo {
         display: none;
     }
-    
+
     .cover-nav a {
         font-size: 1.2em;
         letter-spacing: 0.1em;
@@ -285,14 +285,18 @@ body::after {
     }
 
     nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 8px 0;
-}
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 0;
+    }
 
-nav a {
-    margin-right: 10px;
-    font-size: 0.8em;
-}
+    nav a {
+        margin-right: 10px;
+        font-size: 0.8em;
+    }
+
+    body::after {
+        width: 16px;
+    }
 }
