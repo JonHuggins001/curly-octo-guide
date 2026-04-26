@@ -19,10 +19,14 @@ nav a {
     text-decoration: none;
     color: #00b4b4;
     letter-spacing: 0.05em;
+    transition: color 0.2s ease, text-shadow 0.2 ease;
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: #18ffff;
+    text-shadow: 
+        0 0 6px #18ffff,
+        0 0 12px #00e5ff;
 }
 
 h1 {
@@ -54,13 +58,24 @@ hr {
 a {
     color: #00b4b4;
     text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 a:hover {
-    color: #ffffff;
+    color: #18ffff;
     text-decoration: none;
+    text-shadow: 
+        0 0 6px #18ffff,
+        0 0 12px #00e5ff;
 }
-
+.cover-tagline {
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
+    color: #00b4b4;
+    font-size: 0.95rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
 form input,
 form textarea {
     background-color: #1a1a1f;
@@ -81,12 +96,38 @@ form button {
     letter-spacing: 0.1em;
     cursor: pointer;
     margin-top: 10px;
+    transition: all 0.2s ease;
 }
 
 form button:hover {
-    background-color: #ffffff;
+    background-color: #18ffff;
+    box-shadow: 
+        0 0 8px #18ffff,
+        0 0 16px #00e5ff;
 }
 
+form input,
+form textarea {
+    background-color: #0d0d0f;
+    color: #ffffff;
+    border: 1px solid #00b4b4;
+    padding: 10px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #18ffff;
+    box-shadow:
+        0 0 6px #18ffff,
+        0 0 12px #00e5ff;
+}
+form input:focus,
+form textarea:focus {
+    caret-color: #18ffff;
+}
 p {
     line-height: 1.8;
     font-size: 1em;
@@ -301,5 +342,9 @@ body::after {
 
     body::after {
         width: 45px;
+    }
+
+    .side-panel {
+        display: none;
     }
 }
