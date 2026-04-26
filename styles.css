@@ -263,3 +263,36 @@ body::after {
     z-index: 999;
     pointer-events: none;
 }
+
+
+
+@media (max-width: 768px) {
+    .side-logo {
+        display: none;
+    }
+    
+    .cover-nav a {
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+    }
+
+    .cover-nav {
+        gap: 1.2rem;
+    }
+
+    .cover-wrap {
+        padding: 0.5rem;
+    }
+
+    nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+nav a {
+    margin-right: 10px;
+    font-size: 0.8em;
+}
+}
