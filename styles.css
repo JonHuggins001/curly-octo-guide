@@ -325,11 +325,10 @@ body::after {
 
     .cover-nav {
         gap: 1.2rem;
-        margin-top: 0.8rem !important;
+        margin-top: 2rem !important;
     }
     .cover-tagline {
-        font-size: .80rem;
-        margin-top: 0rem;
+        display: none;
     }
     .cover-wrap {
         padding: 0.5rem;
@@ -350,7 +349,9 @@ body::after {
     body::after {
         width: 35px;
     }
-
+    .cover-url {
+        display: none;
+    }
     .side-panel {
         display: none;
     }
