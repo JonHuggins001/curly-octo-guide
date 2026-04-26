@@ -68,14 +68,7 @@ a:hover {
         0 0 6px #18ffff,
         0 0 12px #00e5ff;
 }
-.cover-tagline {
-    margin-top: 0.8rem;
-    margin-bottom: 1.2rem;
-    color: #00b4b4;
-    font-size: 0.95rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-}
+
 form input,
 form textarea {
     background-color: #1a1a1f;
@@ -194,10 +187,11 @@ body.cover {
 }
 
 .cover-line {
-    width: 60px;
+    width: 150px;
     height: 1px;
     background: #00b4b4;
-    margin: 0 auto 2rem;
+    margin: 1rem auto 2rem;
+    margin-top: 2rem;
 }
 
 .cover-nav {
@@ -207,12 +201,13 @@ body.cover {
     gap: 0.75rem;
     border: none;
     padding: 0;
+    margin-top: 7rem !important;
     margin-bottom: 2.5rem;
 }
 
 .cover-nav a {
-    font-size: 13px;
-    letter-spacing: 0.2em;
+    font-size: 17px;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     margin: 0;
 }
@@ -223,7 +218,15 @@ body.cover {
     font-size: 11px;
     letter-spacing: 0.15em;
 }
-
+.cover-tagline {
+    font-family: "Courier New", monospace;
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
+    color: #18ffff;
+    font-size: 1.5rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
 body::before {
     content: "";
     position: fixed;
@@ -322,8 +325,11 @@ body::after {
 
     .cover-nav {
         gap: 1.2rem;
+        margin-top: 0.8rem !important;
     }
-
+    .cover-tagline {
+        font-size: .80rem;
+    }
     .cover-wrap {
         padding: 0.5rem;
     }
@@ -341,7 +347,7 @@ body::after {
     }
 
     body::after {
-        width: 45px;
+        width: 35px;
     }
 
     .side-panel {
