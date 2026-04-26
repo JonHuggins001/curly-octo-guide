@@ -122,17 +122,20 @@ body.cover {
 }
 
 .cover-url {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     color: #00b4b4;
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    margin-bottom: 2rem;
     opacity: 0.7;
 }
 
 .cover-name-first {
     font-family: "Racing Sans One", sans-serif;
-    font-size: clamp(3rem, 10vw, 6rem);
+    font-size: clamp(2rem, 7vw, 4.5rem);
     color: #00b4b4;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -141,7 +144,7 @@ body.cover {
 
 .cover-name-last {
     font-family: "Racing Sans One", sans-serif;
-    font-size: clamp(3rem, 10vw, 6rem);
+    font-size: clamp(2rem, 10vw, 4.5rem);
     color: #c8c8c8;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -167,7 +170,7 @@ body.cover {
 }
 
 .cover-nav a {
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     margin: 0;
