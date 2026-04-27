@@ -121,6 +121,9 @@ form input:focus,
 form textarea:focus {
     caret-color: #18ffff;
 }
+form {
+    overscroll-behavior: none;
+}
 p {
     line-height: 1.8;
     font-size: 1em;
