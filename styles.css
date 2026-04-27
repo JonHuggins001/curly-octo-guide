@@ -350,6 +350,9 @@ body::after {
         width: 35px;
     }
 
+    form input, form textarea {
+        width: 90%;
+    }
     h1 {
         font-size: 1.7em;
     }
