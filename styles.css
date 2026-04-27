@@ -349,6 +349,10 @@ body::after {
     body::after {
         width: 35px;
     }
+
+    h1 {
+        font-size: 1.7em;
+    }
     .cover-url {
         display: none;
     }
