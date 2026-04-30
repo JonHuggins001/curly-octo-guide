@@ -369,7 +369,7 @@ body::after {
         display: none;
     }
 }
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1360px) and (min-width: 769px) {
     .side-logo {
         display: none;
     }
