@@ -377,3 +377,11 @@ body::after {
         transform: scale(0.95);
     }
 }
+@media (max-width: 950px) {
+    .side-panel {
+        display: none;
+    }
+    form input, form textarea {
+        width: 90%;
+    }
+}
