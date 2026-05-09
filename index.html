@@ -53,13 +53,22 @@
     <style>
   #chat-btn {
     position: fixed; bottom: 28px; right: 28px;
-    background: #1a1a2e; color: #fff; border: none;
+    background: #1c2333; color: #00b4b4; border: 1px solid #00b4b4;
     border-radius: 50px; padding: 12px 20px;
     font-size: 15px; cursor: pointer; z-index: 9999;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-    transition: transform 0.2s;
-  }
-  #chat-btn:hover { transform: scale(1.05); }
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease;
+}
+  
+  #chat-btn:hover {
+    background-color: #00b4b4;
+    color: #0d0d0f;
+    box-shadow: 
+        0 0 8px #18ffff,
+        0 0 16px #00e5ff;
+    transform: scale(1.05);
+}
   #chat-panel {
     position: fixed; bottom: 90px; right: 28px;
     width: 340px; height: 480px;
