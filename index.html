@@ -104,10 +104,13 @@
 
 @media (max-width: 768px) {
   #chat-btn {
-      position: static;
-      display: block;
-      margin: 20px auto;
+      position: fixed;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
       border-radius: 8px;
+      width: 80%;
+      text-align: center;
   }
   #chat-panel {
       position: fixed;
@@ -118,7 +121,8 @@
       height: 60%;
       border-radius: 16px 16px 0 0;
   }
-}  
+}
+
 </style>
 
 <button id="chat-btn" onclick="toggleChat()">🤖 Ask Jonbot</button>
