@@ -3,191 +3,121 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Jon Huggins - Accounts professional transitioning into data analytics, focusing on Excel, SQL and Python.">
-    <title>Home | Jon Huggins</title>
-    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Jon Huggins - Accounts professional transitioning into data analytics, focusing on Excel, SQL and Python.">
+  <title>Home | Jon Huggins</title>
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 
 <body class="cover">
 
-    <div class="cover-wrap">
+  <div class="cover-wrap">
 
-        <div class="cover-url">jonhuggins.nz</div>
+    <div class="cover-url">jonhuggins.nz</div>
 
-        <div class="cover-name">
-            <div class="cover-name-first">Jon</div>
-            <div class="cover-name-last">Huggins</div>
-        </div>
-     
-        <div class="cover-tagline">Connect | Build | Explore</div>
-
-        <!-- <div class="cover-line"></div> -->
-        
-
-        <nav class="cover-nav">
-            <a href="about.html">About</a>
-            <a href="experience.html">Experience</a>
-            <a href="skills.html">Skills</a>
-            <a href="personal.html">Personal</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-        <div class="cover-dots">&#9632; &#9632; &#9632;</div>
-
+    <div class="cover-name">
+      <div class="cover-name-first">Jon</div>
+      <div class="cover-name-last">Huggins</div>
     </div>
-    <div class="side-panel">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+
+    <div class="cover-tagline">Connect | Build | Explore</div>
+
+    <!-- <div class="cover-line"></div> -->
+
+
+    <nav class="cover-nav">
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="personal.html">Personal</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="cover-dots">&#9632; &#9632; &#9632;</div>
+
+  </div>
+  <div class="side-panel">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div style="height: 80px;"></div>
+
+
+  <button id="chat-btn" onclick="toggleChat()">🤖 Ask Jonbot</button>
+
+  <div id="chat-panel">
+    <div id="chat-header">Ask me anything</div>
+    <div id="chat-messages">
+      <div class="msg bot">Greetings - I'm Jonbot, transmitting from the Nova-Z9 system. Go ahead - ask me anything
+        about Jon!</div>
     </div>
-    <div style="height: 80px;"></div>
-    <style>
-  #chat-btn {
-    position: fixed; bottom: 28px; right: 28px;
-    background: #0a0f1a; color: #00b4b4; border: 1px solid #00b4b4;
-    border-radius: 50px; padding: 12px 20px;
-    font-size: 17px; cursor: pointer; z-index: 9999;
-    font-family: "Orbitron", monospace;
-    letter-spacing: 0.1em;
-    transition: all 0.2s ease;
-}
-  
-  #chat-btn:hover {
-    background-color: #00b4b4;
-    color: #0d0d0f;
-    box-shadow: 
-        0 0 8px #18ffff,
-        0 0 16px #00e5ff;
-    transform: translateX(-50%) scale(1.05);
-}
-  #chat-panel {
-    position: fixed; bottom: 90px; right: 28px;
-    width: 340px; height: 480px;
-    background: #fff; border-radius: 16px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
-    display: none; flex-direction: column;
-    font-family: system-ui, sans-serif; z-index: 9999;
-    overflow: hidden; border: 1px solid #e5e7eb;
-  }
-  #chat-panel.open { display: flex; }
-  #chat-header {
-    background: #1a1a2e; color: #fff;
-    padding: 14px 18px; font-weight: 600; font-size: 15px;
-  }
-  #chat-messages {
-    flex: 1; overflow-y: auto; padding: 14px;
-    display: flex; flex-direction: column; gap: 10px;
-  }
-  .msg { max-width: 85%; padding: 9px 13px; border-radius: 12px; font-size: 14px; line-height: 1.5; }
-  .msg.user { background: #1a1a2e; color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
-  .msg.bot  { background: #f3f4f6; color: #111; align-self: flex-start; border-bottom-left-radius: 4px; }
-  #chat-input-row { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid #e5e7eb; }
-  #chat-input {
-    flex: 1; border: 1px solid #d1d5db; border-radius: 8px;
-    padding: 8px 12px; font-size: 14px; outline: none;
-  }
-  #chat-send {
-    background: #1a1a2e; color: #fff; border: none;
-    border-radius: 8px; padding: 8px 14px; cursor: pointer; font-size: 14px;
-  }
-
-@media (max-width: 768px) {
-  #chat-btn {
-      position: fixed;
-      bottom: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 8px;
-      width: 65%;
-      text-align: center;
-  }
-  #chat-panel {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      width: 100%;
-      height: 60%;
-      border-radius: 16px 16px 0 0;
-  }
-}
-
-</style>
-
-<button id="chat-btn" onclick="toggleChat()">🤖 Ask Jonbot</button>
-
-<div id="chat-panel">
-  <div id="chat-header">Ask me anything</div>
-  <div id="chat-messages">
-    <div class="msg bot">Greetings - I'm Jonbot, transmitting from the Nova-Z9 system. Go ahead - ask me anything about Jon!</div>
+    <div id="chat-input-row">
+      <input id="chat-input" type="text" placeholder="Type a message…" onkeydown="if(event.key==='Enter') sendMsg()" />
+      <button id="chat-send" onclick="sendMsg()">Send</button>
+    </div>
   </div>
-  <div id="chat-input-row">
-    <input id="chat-input" type="text" placeholder="Type a message…" onkeydown="if(event.key==='Enter') sendMsg()" />
-    <button id="chat-send" onclick="sendMsg()">Send</button>
-  </div>
-</div>
 
-<script>
-  const SYSTEM_PROMPT = `You are a helpful assistant on a developer portfolio website. Answer questions about their work, skills, and projects. Be friendly and concise.`;
+  <script>
+    const SYSTEM_PROMPT = `You are a helpful assistant on a developer portfolio website. Answer questions about their work, skills, and projects. Be friendly and concise.`;
 
-  const history = [];
+    const history = [];
 
-  function toggleChat() {
-    document.getElementById('chat-panel').classList.toggle('open');
-  }
-
-  async function sendMsg() {
-    const input = document.getElementById('chat-input');
-    const text = input.value.trim();
-    if (!text) return;
-    input.value = '';
-
-    addMessage(text, 'user');
-    history.push({ role: 'user', content: text });
-
-    const thinking = addMessage('…', 'bot');
-
-    try {
-      const res = await fetch('https://chat.jonhuggins.nz', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'deepseek-chat',
-          messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...history]
-        })
-      });
-      const data = await res.json();
-      console.log(data);
-      const reply = data.choices[0].message.content;
-      history.push({ role: 'assistant', content: reply });
-      thinking.textContent = reply;
-    } catch (e) {
-      thinking.textContent = e.message;
+    function toggleChat() {
+      document.getElementById('chat-panel').classList.toggle('open');
     }
-  }
 
-  function addMessage(text, who) {
-    const el = document.createElement('div');
-    el.className = `msg ${who}`;
-    el.textContent = text;
-    const msgs = document.getElementById('chat-messages');
-    msgs.appendChild(el);
-    msgs.scrollTop = msgs.scrollHeight;
-    return el;
-  }
-</script>
-    
+    async function sendMsg() {
+      const input = document.getElementById('chat-input');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+
+      addMessage(text, 'user');
+      history.push({ role: 'user', content: text });
+
+      const thinking = addMessage('…', 'bot');
+
+      try {
+        const res = await fetch('https://chat.jonhuggins.nz', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model: 'deepseek-chat',
+            messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...history]
+          })
+        });
+        const data = await res.json();
+        console.log(data);
+        const reply = data.choices[0].message.content;
+        history.push({ role: 'assistant', content: reply });
+        thinking.textContent = reply;
+      } catch (e) {
+        thinking.textContent = e.message;
+      }
+    }
+
+    function addMessage(text, who) {
+      const el = document.createElement('div');
+      el.className = `msg ${who}`;
+      el.textContent = text;
+      const msgs = document.getElementById('chat-messages');
+      msgs.appendChild(el);
+      msgs.scrollTop = msgs.scrollHeight;
+      return el;
+    }
+  </script>
+
 </body>
 
 </html>

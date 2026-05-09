@@ -3,7 +3,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jon Huggins' professional experience across accounts, customer service and management roles in New Zealand and overseas.">
+    <meta name="description"
+        content="Jon Huggins' professional experience across accounts, customer service and management roles in New Zealand and overseas.">
     <title>Experience | Jon Huggins</title>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -62,70 +63,72 @@
         <span></span>
     </div>
     <div style="height: 80px;"></div>
-    
 
-<button id="chat-btn" onclick="toggleChat()">🤖 Ask Jonbot</button>
 
-<div id="chat-panel">
-  <div id="chat-header">Ask me anything</div>
-  <div id="chat-messages">
-    <div class="msg bot">Greetings - I'm Jonbot, transmitting from the Nova-Z9 system. Go ahead - ask me anything about Jon!</div>
-  </div>
-  <div id="chat-input-row">
-    <input id="chat-input" type="text" placeholder="Type a message…" onkeydown="if(event.key==='Enter') sendMsg()" />
-    <button id="chat-send" onclick="sendMsg()">Send</button>
-  </div>
-</div>
+    <button id="chat-btn" onclick="toggleChat()">🤖 Ask Jonbot</button>
 
-<script>
-  const SYSTEM_PROMPT = `You are a helpful assistant on a developer portfolio website. Answer questions about their work, skills, and projects. Be friendly and concise.`;
+    <div id="chat-panel">
+        <div id="chat-header">Ask me anything</div>
+        <div id="chat-messages">
+            <div class="msg bot">Greetings - I'm Jonbot, transmitting from the Nova-Z9 system. Go ahead - ask me
+                anything about Jon!</div>
+        </div>
+        <div id="chat-input-row">
+            <input id="chat-input" type="text" placeholder="Type a message…"
+                onkeydown="if(event.key==='Enter') sendMsg()" />
+            <button id="chat-send" onclick="sendMsg()">Send</button>
+        </div>
+    </div>
 
-  const history = [];
+    <script>
+        const SYSTEM_PROMPT = `You are a helpful assistant on a developer portfolio website. Answer questions about their work, skills, and projects. Be friendly and concise.`;
 
-  function toggleChat() {
-    document.getElementById('chat-panel').classList.toggle('open');
-  }
+        const history = [];
 
-  async function sendMsg() {
-    const input = document.getElementById('chat-input');
-    const text = input.value.trim();
-    if (!text) return;
-    input.value = '';
+        function toggleChat() {
+            document.getElementById('chat-panel').classList.toggle('open');
+        }
 
-    addMessage(text, 'user');
-    history.push({ role: 'user', content: text });
+        async function sendMsg() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+            input.value = '';
 
-    const thinking = addMessage('…', 'bot');
+            addMessage(text, 'user');
+            history.push({ role: 'user', content: text });
 
-    try {
-      const res = await fetch('https://chat.jonhuggins.nz', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'deepseek-chat',
-          messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...history]
-        })
-      });
-      const data = await res.json();
-      console.log(data);
-      const reply = data.choices[0].message.content;
-      history.push({ role: 'assistant', content: reply });
-      thinking.textContent = reply;
-    } catch (e) {
-      thinking.textContent = e.message;
-    }
-  }
+            const thinking = addMessage('…', 'bot');
 
-  function addMessage(text, who) {
-    const el = document.createElement('div');
-    el.className = `msg ${who}`;
-    el.textContent = text;
-    const msgs = document.getElementById('chat-messages');
-    msgs.appendChild(el);
-    msgs.scrollTop = msgs.scrollHeight;
-    return el;
-  }
-</script>
+            try {
+                const res = await fetch('https://chat.jonhuggins.nz', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        model: 'deepseek-chat',
+                        messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...history]
+                    })
+                });
+                const data = await res.json();
+                console.log(data);
+                const reply = data.choices[0].message.content;
+                history.push({ role: 'assistant', content: reply });
+                thinking.textContent = reply;
+            } catch (e) {
+                thinking.textContent = e.message;
+            }
+        }
+
+        function addMessage(text, who) {
+            const el = document.createElement('div');
+            el.className = `msg ${who}`;
+            el.textContent = text;
+            const msgs = document.getElementById('chat-messages');
+            msgs.appendChild(el);
+            msgs.scrollTop = msgs.scrollHeight;
+            return el;
+        }
+    </script>
 </body>
 
 </html>

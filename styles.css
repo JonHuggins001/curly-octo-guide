@@ -454,9 +454,11 @@ body::after {
         height: 60%;
         border-radius: 16px 16px 0 0;
     }
+
     #chat-btn:hover {
-    transform: translateX(-50%) scale(1.05);
-}
+        transform: translateX(-50%) scale(1.05);
+    }
+
     body.cover {
         align-items: flex-start;
         padding-top: 3rem;
