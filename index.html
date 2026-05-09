@@ -135,11 +135,12 @@
         })
       });
       const data = await res.json();
+      console.log(data);
       const reply = data.choices[0].message.content;
       history.push({ role: 'assistant', content: reply });
       thinking.textContent = reply;
     } catch (e) {
-      thinking.textContent = 'Something went wrong. Please try again.';
+      thinking.textContent = e.message;
     }
   }
 
