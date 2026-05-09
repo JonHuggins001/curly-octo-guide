@@ -318,6 +318,11 @@ body::after {
 
 
 @media (max-width: 768px) {
+    body.cover {
+        align-items: flex-start;
+        padding-top: 3rem;
+    }
+    
     .side-logo {
         display: none;
     }
