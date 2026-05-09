@@ -1,3 +1,115 @@
+#chat-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: #0a0f1a;
+    color: #00b4b4;
+    border: 1px solid #00b4b4;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    z-index: 9999;
+    font-family: "Orbitron", monospace;
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease;
+}
+
+#chat-btn:hover {
+    background-color: #00b4b4;
+    color: #0d0d0f;
+    box-shadow:
+        0 0 8px #18ffff,
+        0 0 16px #00e5ff;
+    transform: translateX(-50%) scale(1.05);
+}
+
+#chat-panel {
+    position: fixed;
+    bottom: 90px;
+    right: 28px;
+    width: 340px;
+    height: 480px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+    display: none;
+    flex-direction: column;
+    font-family: system-ui, sans-serif;
+    z-index: 9999;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+#chat-panel.open {
+    display: flex;
+}
+
+#chat-header {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 14px 18px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.msg {
+    max-width: 85%;
+    padding: 9px 13px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.msg.user {
+    background: #1a1a2e;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.msg.bot {
+    background: #f3f4f6;
+    color: #111;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+#chat-input-row {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+    border-top: 1px solid #e5e7eb;
+}
+
+#chat-input {
+    flex: 1;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+#chat-send {
+    background: #1a1a2e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
 body {
     max-width: 750px;
     margin: auto;
@@ -24,7 +136,7 @@ nav a {
 
 nav a:hover {
     color: #18ffff;
-    text-shadow: 
+    text-shadow:
         0 0 6px #18ffff,
         0 0 12px #00e5ff;
 }
@@ -64,7 +176,7 @@ a {
 a:hover {
     color: #18ffff;
     text-decoration: none;
-    text-shadow: 
+    text-shadow:
         0 0 6px #18ffff,
         0 0 12px #00e5ff;
 }
@@ -94,7 +206,7 @@ form button {
 
 form button:hover {
     background-color: #18ffff;
-    box-shadow: 
+    box-shadow:
         0 0 8px #18ffff,
         0 0 16px #00e5ff;
 }
@@ -117,13 +229,16 @@ form textarea:focus {
         0 0 6px #18ffff,
         0 0 12px #00e5ff;
 }
+
 form input:focus,
 form textarea:focus {
     caret-color: #18ffff;
 }
+
 form {
     overscroll-behavior: none;
 }
+
 p {
     line-height: 1.8;
     font-size: 1em;
@@ -221,6 +336,7 @@ body.cover {
     font-size: 11px;
     letter-spacing: 0.15em;
 }
+
 .cover-tagline {
     font-family: "Courier New", monospace;
     margin-top: 0.8rem;
@@ -230,6 +346,7 @@ body.cover {
     letter-spacing: 0.18em;
     text-transform: uppercase;
 }
+
 body::before {
     content: "";
     position: fixed;
@@ -318,11 +435,31 @@ body::after {
 
 
 @media (max-width: 768px) {
+    #chat-btn {
+        position: fixed;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 8px;
+        width: 65%;
+        text-align: center;
+    }
+
+    #chat-panel {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        border-radius: 16px 16px 0 0;
+    }
+
     body.cover {
         align-items: flex-start;
         padding-top: 3rem;
     }
-    
+
     .side-logo {
         display: none;
     }
@@ -336,9 +473,11 @@ body::after {
         gap: 1.2rem;
         margin-top: 4rem !important;
     }
+
     .cover-tagline {
         display: none;
     }
+
     .cover-wrap {
         padding: 0.5rem;
     }
@@ -359,22 +498,28 @@ body::after {
         width: 35px;
     }
 
-    form input, form textarea {
+    form input,
+    form textarea {
         width: 90%;
     }
+
     h1 {
         font-size: 1.7em;
     }
+
     .cover-url {
         display: none;
     }
+
     .side-panel {
         display: none;
     }
+
     .cover-dots {
         display: none;
     }
 }
+
 @media (max-width: 1360px) and (min-width: 769px) {
     .side-logo {
         opacity: 0;
@@ -382,11 +527,14 @@ body::after {
         transform: scale(0.95);
     }
 }
+
 @media (max-width: 950px) {
     .side-panel {
         display: none;
     }
-    form input, form textarea {
+
+    form input,
+    form textarea {
         width: 90%;
     }
 }
