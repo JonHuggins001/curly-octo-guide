@@ -21,7 +21,7 @@
     box-shadow:
         0 0 8px #18ffff,
         0 0 16px #00e5ff;
-    transform: translateX(-50%) scale(1.05);
+    transform: scale(1.05);
 }
 
 #chat-panel {
@@ -454,7 +454,9 @@ body::after {
         height: 60%;
         border-radius: 16px 16px 0 0;
     }
-
+    #chat-btn:hover {
+    transform: translateX(-50%) scale(1.05);
+}
     body.cover {
         align-items: flex-start;
         padding-top: 3rem;
