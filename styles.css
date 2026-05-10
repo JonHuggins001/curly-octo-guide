@@ -208,11 +208,12 @@ form textarea {
 form button {
   background-color: #00b4b4;
   color: #0d0d0f;
-  border: none;
+  border: 1px solid #000;       
+  border-radius: 6px;           
   padding: 14px 28px;
   font-size: 1.1rem;
-  font-weight: 700;             
-  text-transform: uppercase;    
+  font-weight: 700;
+  text-transform: uppercase;
   font-family: "Racing Sans One", sans-serif;
   letter-spacing: 0.1em;
   cursor: pointer;
