@@ -206,15 +206,18 @@ form textarea {
 }
 
 form button {
-    background-color: #00b4b4;
-    color: #0d0d0f;
-    border: none;
-    padding: 10px 20px;
-    font-family: "Racing Sans One", sans-serif;
-    letter-spacing: 0.1em;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: all 0.2s ease;
+  background-color: #00b4b4;
+  color: #0d0d0f;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 700;             
+  text-transform: uppercase;    
+  font-family: "Racing Sans One", sans-serif;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
 }
 
 form button:hover {
