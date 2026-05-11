@@ -19,225 +19,66 @@
         <a href="about.html">About</a>
         <a href="experience.html">Experience</a>
         <a href="skills.html">Skills</a>
-        <a href="personal.html" style="font-weight: bold;">Personal</a>
+        <a href="personal.html">Personal</a>
+        <a href="meet.html" style="font-weight: bold;">Meet</a>
         <a href="contact.html">Contact</a>
     </nav>
     <h1>Meet</h1>
     <hr>
-        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600&display=swap');
+    <p>Open to meeting in person or virtually - if you're curious what I could bring to your team or think there might be a fit, grab a day & time below for a catch up.</p>
 
-    :root {
-      --tron-blue: #00cfff;
-      --tron-teal: #00e5cc;
-      --tron-dark: #020c14;
-      --tron-mid: #061a2a;
-      --tron-panel: #071e30;
-      --tron-border: rgba(0, 207, 255, 0.25);
-      --tron-glow: rgba(0, 207, 255, 0.08);
-    }
+    <div id="cal-booking" style="width:100%;min-height:600px;margin-top:1.5rem;"></div>
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--tron-dark);
-      font-family: 'Exo 2', sans-serif;
-      color: #c8eaf5;
-      min-height: 100vh;
-    }
-
-    .booking-section {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-
-    .booking-header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .booking-header .label {
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      color: var(--tron-teal);
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-
-    .booking-header h2 {
-      font-size: 1.8rem;
-      font-weight: 300;
-      color: #e8f6fd;
-      letter-spacing: 0.05em;
-    }
-
-    .booking-header h2 span {
-      color: var(--tron-blue);
-    }
-
-    .booking-header p {
-      margin-top: 0.75rem;
-      font-size: 0.9rem;
-      color: rgba(200, 234, 245, 0.55);
-      font-weight: 300;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 0 auto 2.5rem;
-      max-width: 300px;
-    }
-
-    .divider::before,
-    .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--tron-border));
-    }
-
-    .divider::after {
-      background: linear-gradient(to left, transparent, var(--tron-border));
-    }
-
-    .divider-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--tron-blue);
-    }
-
-    .cal-wrapper {
-      background: var(--tron-panel);
-      border: 1px solid var(--tron-border);
-      border-radius: 4px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .cal-wrapper::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(to right, transparent, var(--tron-blue), var(--tron-teal), transparent);
-    }
-
-    .cal-inner {
-      padding: 0.5rem;
-    }
-
-    .corner {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-color: var(--tron-blue);
-      border-style: solid;
-      opacity: 0.6;
-    }
-
-    .corner-tl { top: 6px; left: 6px; border-width: 1px 0 0 1px; }
-    .corner-tr { top: 6px; right: 6px; border-width: 1px 1px 0 0; }
-    .corner-bl { bottom: 6px; left: 6px; border-width: 0 0 1px 1px; }
-    .corner-br { bottom: 6px; right: 6px; border-width: 0 1px 1px 0; }
-
-    .notice {
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      color: rgba(0, 207, 255, 0.4);
-      text-align: center;
-      margin-top: 1.25rem;
-    }
-  </style>
-</head>
-<body>
-
-<section class="booking-section">
-
-  <div class="booking-header">
-    <div class="label">&#9632; Schedule a session</div>
-    <h2>Let's <span>connect</span></h2>
-    <p>Choose virtual or in-person — select a time that works for you. Bookings open from the next day onward.</p>
-  </div>
-
-  <div class="divider"><div class="divider-dot"></div></div>
-
-  <div class="cal-wrapper">
-    <div class="corner corner-tl"></div>
-    <div class="corner corner-tr"></div>
-    <div class="corner corner-bl"></div>
-    <div class="corner corner-br"></div>
-    <div class="cal-inner">
-
-      <!-- CAL.COM EMBED START -->
-      <div id="cal-booking" style="width:100%;min-height:600px;"></div>
-      <script>
+    <script>
         (function (C, A, L) {
-          let p = function (a, ar) { a.q.push(ar); };
-          let d = C.document;
-          C.Cal = C.Cal || function () {
-            let cal = C.Cal;
-            let ar = arguments;
-            if (!cal.loaded) {
-              cal.ns = {};
-              cal.q = cal.q || [];
-              d.head.appendChild(d.createElement("script")).src = A;
-              cal.loaded = true;
-            }
-            if (ar[0] === L) {
-              const api = function () { p(api, arguments); };
-              const namespace = ar[1];
-              api.q = api.q || [];
-              if (typeof namespace === "string") {
-                cal.ns[namespace] = cal.ns[namespace] || api;
-                p(cal.ns[namespace], ar);
-                p(cal, ["-", namespace, api]);
-              } else {
+            let p = function (a, ar) { a.q.push(ar); };
+            let d = C.document;
+            C.Cal = C.Cal || function () {
+                let cal = C.Cal;
+                let ar = arguments;
+                if (!cal.loaded) {
+                    cal.ns = {};
+                    cal.q = cal.q || [];
+                    d.head.appendChild(d.createElement("script")).src = A;
+                    cal.loaded = true;
+                }
+                if (ar[0] === L) {
+                    const api = function () { p(api, arguments); };
+                    const namespace = ar[1];
+                    api.q = api.q || [];
+                    if (typeof namespace === "string") {
+                        cal.ns[namespace] = cal.ns[namespace] || api;
+                        p(cal.ns[namespace], ar);
+                        p(cal, ["-", namespace, api]);
+                    } else {
+                        p(cal, ar);
+                    }
+                    return;
+                }
                 p(cal, ar);
-              }
-              return;
-            }
-            p(cal, ar);
-          };
+            };
         })(window, "https://app.cal.com/embed/embed.js", "init");
 
         Cal("init", { origin: "https://app.cal.com" });
 
         Cal("inline", {
-          elementOrSelector: "#cal-booking",
-          calLink: "jonhuggins",
-          config: {
-            theme: "dark",
-            hideEventTypeDetails: false,
-          }
+            elementOrSelector: "#cal-booking",
+            calLink: "jonhuggins",
+            config: {
+                theme: "dark"
+            }
         });
 
         Cal("ui", {
-          theme: "dark",
-          styles: {
-            branding: {
-              brandColor: "#00cfff"
+            theme: "dark",
+            styles: {
+                branding: {
+                    brandColor: "#00cfff"
+                }
             }
-          },
-          hideEventTypeDetails: false
         });
-      </script>
-      <!-- CAL.COM EMBED END -->
+    </script>
 
-    </div>
-  </div>
-
-  <p class="notice">&#9632; &nbsp; bookings confirmed within 24hrs &nbsp; &#9632;</p>
-
-</section>
-    
     <div class="side-panel">
         <span></span>
         <span></span>
@@ -247,10 +88,9 @@
     </div>
     <div style="height: 80px;"></div>
 
-
     <button id="chat-btn" onclick="toggleChat()">
-  <span style="font-size: 1.4em;">🤖</span> Ask Jonbot
-</button>
+        <span style="font-size: 1.4em;">🤖</span> Ask Jonbot
+    </button>
 
     <div id="chat-panel">
         <div id="chat-header">Ask me anything</div>
@@ -295,7 +135,6 @@
                     })
                 });
                 const data = await res.json();
-                console.log(data);
                 const reply = data.choices[0].message.content;
                 history.push({ role: 'assistant', content: reply });
                 thinking.textContent = reply;
