@@ -452,6 +452,10 @@ body::after {
 
 
 @media (max-width: 768px) {
+    body.no-mobile-chat #chat-btn,
+    body.no-mobile-chat #chat-panel {
+        display: none
+    }
     #chat-btn {
         position: fixed;
         bottom: 12px;
