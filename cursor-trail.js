@@ -20,7 +20,7 @@ function animate() {
   points.forEach(p => {
     ctx.beginPath();
     ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255,255,255,${1 - p.age / 20})`;
+    ctx.fillStyle = `rgba(0, 255, 255,${1 - p.age / 20})`;
     ctx.fill();
     p.age++;
   });
