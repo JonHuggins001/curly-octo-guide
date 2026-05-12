@@ -1,3 +1,4 @@
+if (window.matchMedia('(pointer: fine)').matches) {
 const canvas = document.getElementById('trail');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -28,3 +29,4 @@ function animate() {
 }
 
 animate();
+}
