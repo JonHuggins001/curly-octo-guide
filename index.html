@@ -32,7 +32,20 @@
       <div class="cover-name-last">Huggins</div>
     </div>
 
-    <div class="cover-tagline">Connect | Build | Explore</div>
+    <div class="cover-tagline" id="tagline"></div>
+
+<script>
+  const text = "Connect | Build | Explore";
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      document.getElementById('tagline').textContent += text[i];
+      i++;
+      setTimeout(type, 80);
+    }
+  }
+  type();
+</script>
 
     <!-- <div class="cover-line"></div> -->
 
