@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download Jon Huggins' CV in PDF or Word format.">
+    <title>CV | Jon Huggins</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <style>
+        .cv-download-grid {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .cv-card {
+            border: 1px solid #00b4b4;
+            padding: 1.8rem 2rem;
+            flex: 1;
+            min-width: 200px;
+            position: relative;
+            transition: box-shadow 0.25s ease, border-color 0.25s ease;
+            text-align: left;
+        }
+
+        .cv-card:hover {
+            border-color: #18ffff;
+            box-shadow:
+                0 0 10px rgba(24, 255, 255, 0.15),
+                0 0 30px rgba(0, 229, 255, 0.08);
+        }
+
+        .cv-card-label {
+            font-family: "Courier New", monospace;
+            font-size: 0.72em;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #00b4b4;
+            margin-bottom: 0.4rem;
+            opacity: 0.7;
+        }
+
+        .cv-card-format {
+            font-family: "Racing Sans One", sans-serif;
+            font-size: 2rem;
+            color: #00b4b4;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 0.6rem;
+        }
+
+        .cv-card-desc {
+            font-size: 0.82em;
+            color: #888;
+            line-height: 1.5;
+            margin-bottom: 1.4rem;
+            font-family: "Courier New", monospace;
+        }
+
+        .cv-download-btn {
+            display: inline-block;
+            border: 1px solid #00b4b4;
+            color: #00b4b4;
+            padding: 8px 20px;
+            font-family: "Courier New", monospace;
+            font-size: 0.8em;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .cv-download-btn:hover {
+            color: #0d0d0f;
+            background-color: #00b4b4;
+            text-shadow: none;
+            box-shadow:
+                0 0 10px rgba(0, 180, 180, 0.4),
+                0 0 20px rgba(0, 229, 255, 0.2);
+        }
+
+        .cv-corner {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            width: 14px;
+            height: 14px;
+            border-top: 2px solid #00b4b4;
+            border-right: 2px solid #00b4b4;
+        }
+
+        .cv-note {
+            font-size: 0.8em;
+            color: #555;
+            font-family: "Courier New", monospace;
+            letter-spacing: 0.05em;
+            border-left: 2px solid #00b4b4;
+            padding-left: 1rem;
+            opacity: 0.75;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="cldisintegrate.png" alt="Jon Huggins logo" class="side-logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="skills.html">Skills</a>
+        <a href="cv.html" style="font-weight: bold;">CV</a>
+        <a href="personal.html">Personal</a>
+        <a href="meet.html">Meet</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>CV</h1>
+    <hr>
+
+    <p>A single-page summary of my experience, education and skills — available in two formats depending on what's useful to you.</p>
+
+    <div class="cv-download-grid">
+        <div class="cv-card">
+            <div class="cv-corner"></div>
+            <div class="cv-card-label">Format 01</div>
+            <div class="cv-card-format">PDF</div>
+            <div class="cv-card-desc">Best for reading,<br>printing or forwarding.</div>
+            <a class="cv-download-btn" href="Jon_Huggins_CV.pdf" download="Jon_Huggins_CV.pdf">↓ Download PDF</a>
+        </div>
+
+        <div class="cv-card">
+            <div class="cv-corner"></div>
+            <div class="cv-card-label">Format 02</div>
+            <div class="cv-card-format">Word</div>
+            <div class="cv-card-desc">Editable .docx file<br>for HR systems.</div>
+            <a class="cv-download-btn" href="Jon_Huggins_CV.docx" download="Jon_Huggins_CV.docx">↓ Download DOCX</a>
+        </div>
+    </div>
+
+    <p class="cv-note">Last updated May 2026. If you have any questions or would like to get in touch, head to the <a href="contact.html">contact page</a>.</p>
+
+    <div class="side-panel">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+
+</html>
