@@ -1,3 +1,8 @@
+/*  ==============================
+    THE JONBOT LIVES! IT LIIIVES!!
+    (Erm... he means well.)
+    ============================== */
+
 #chat-btn {
     position: fixed;
     bottom: 28px;
@@ -41,6 +46,7 @@
     border: 1px solid #e5e7eb;
 }
 
+/*
 #chat-panel.open {
     display: flex;
 }
@@ -123,6 +129,11 @@
     font-size: 14px;
 }
 
+/*  ===============================
+    JONBOT SHRUGS, LEAVES THE ROOM 
+    =============================== */
+
+
 body {
     max-width: 750px;
     margin: auto;
@@ -132,6 +143,8 @@ body {
     color: #c8c8c8;
 }
 
+/* Nifty navvy nimbly navigates neon nav nodes nightly */
+
 nav {
     border-top: 2px solid #00b4b4;
     border-bottom: 2px solid #00b4b4;
@@ -139,12 +152,14 @@ nav {
     margin-bottom: 30px;
 }
 
+/* You can glow your own way */
+
 nav a {
     margin-right: 20px;
     text-decoration: none;
     color: #00b4b4;
     letter-spacing: 0.05em;
-    transition: color 0.2s ease, text-shadow 0.2 ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 nav a:hover {
@@ -194,15 +209,18 @@ a:hover {
         0 0 12px #00e5ff;
 }
 
+/* Secure uplink to another carbon based lifeform */
+
 form input,
 form textarea {
-    background-color: #1a1a1f;
+    background-color: #0d0d0f;
+    color: #ffffff;
     border: 1px solid #00b4b4;
-    color: #c8c8c8;
-    padding: 8px;
+    padding: 10px;
     width: 100%;
-    font-family: "Courier New", monospace;
+    font-family: inherit;
     margin-top: 5px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 form button {
@@ -228,15 +246,6 @@ form button:hover {
         0 0 16px #00e5ff;
 }
 
-form input,
-form textarea {
-    background-color: #0d0d0f;
-    color: #ffffff;
-    border: 1px solid #00b4b4;
-    padding: 10px;
-    font-family: inherit;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
 
 form input:focus,
 form textarea:focus {
@@ -285,6 +294,8 @@ body.cover {
             rgba(0, 180, 180, 0.03) 4px);
 }
 
+/* Welcome to the Jungle */
+
 .cover-wrap {
     text-align: center;
     padding: 2rem;
@@ -319,14 +330,6 @@ body.cover {
     text-transform: uppercase;
     line-height: 1;
     margin-bottom: 2rem;
-}
-
-.cover-line {
-    width: 150px;
-    height: 1px;
-    background: #00b4b4;
-    margin: 1rem auto 2rem;
-    margin-top: 2rem;
 }
 
 .cover-nav {
@@ -364,6 +367,7 @@ body.cover {
     text-transform: uppercase;
 }
 
+/* Background grid ala Tron the temu version */
 body::before {
     content: "";
     position: fixed;
@@ -428,6 +432,7 @@ body::after {
     background: rgba(0, 180, 180, 0.2);
 }
 
+/* Diamonds are a girl's beset friend */
 .side-panel span {
     width: 8px;
     height: 8px;
@@ -438,6 +443,7 @@ body::after {
     background: #1c2333;
 }
 
+/* Your wish is my CLI */
 .side-logo {
     position: fixed;
     left: -40px;
@@ -448,6 +454,8 @@ body::after {
     pointer-events: none;
     transition: opacity 0.6s ease, filter 0.6s ease, transform 0.6s ease;
 }
+
+/* "Beam me down, Scotty", quipped the restless resume */
 
 .cv-download-grid {
     display: flex;
@@ -555,6 +563,27 @@ body::after {
     width: 100%;
 }
 
+@media (max-width: 1360px) and (min-width: 769px) {
+    .side-logo {
+        opacity: 0;
+        filter: blur(8px) drop-shadow(0 0 12px #18ffff);
+        transform: scale(0.95);
+    }
+}
+
+@media (max-width: 950px) {
+    .side-panel {
+        display: none;
+    }
+
+    form input,
+    form textarea {
+        width: 90%;
+    }
+}
+
+/*  Mobile mode.
+    For them dopamine chasers. */
 
 @media (max-width: 768px) {
 
@@ -652,24 +681,6 @@ body::after {
     }
 }
 
-@media (max-width: 1360px) and (min-width: 769px) {
-    .side-logo {
-        opacity: 0;
-        filter: blur(8px) drop-shadow(0 0 12px #18ffff);
-        transform: scale(0.95);
-    }
-}
-
-@media (max-width: 950px) {
-    .side-panel {
-        display: none;
-    }
-
-    form input,
-    form textarea {
-        width: 90%;
-    }
-}
 
 @media (max-width: 600px) {
     .cv-grid-divider {
