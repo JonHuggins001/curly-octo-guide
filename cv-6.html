@@ -4,6 +4,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Download Jon Huggins' CV in PDF or Word format.">
+    <meta property="og:image" content="https://jonhuggins.nz/cybercat.png">
+    <meta property="og:title" content="CV | Jon Huggins">
+    <meta property="og:url" content="https://jonhuggins.nz/cv.html"> 
     <title>CV | Jon Huggins</title>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -11,6 +14,8 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://jonhuggins.nz/cv.html">
     <style>
         .cv-download-grid {
             display: flex;
@@ -117,6 +122,11 @@
             display: block;
             width: 100%;
         }
+    @media (max-width: 600px) {
+        .cv-grid-divider {
+            display: none;
+        }
+    }
     </style>
 </head>
 
@@ -136,13 +146,13 @@
     <h1>CV</h1>
     <hr>
 
-    <p>A single-page summary of my experience, education and skills — available in two formats depending on what's useful to you.</p>
+    <p>A single-page summary of my experience, education and skills.</p>
 
     <div class="cv-grid-divider">
         <svg viewBox="0 0 680 115" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <clipPath id="grid-clip">
-                    <rect x="0" y="0" width="680" height="115"/>
+                    <rect x="90" y="0" width="500" height="115"/>
                 </clipPath>
             </defs>
 
@@ -150,22 +160,22 @@
             <text x="340" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#00b4b4" opacity="0.85" letter-spacing="5">SELECT FORMAT</text>
 
             <g clip-path="url(#grid-clip)">
-                <!-- Horizontal lines -->
-                <line x1="0"   y1="113" x2="680" y2="113" stroke="#00b4b4" stroke-width="1"   opacity="0.9"/>
-                <line x1="40"  y1="95"  x2="640" y2="95"  stroke="#00b4b4" stroke-width="0.7" opacity="0.7"/>
-                <line x1="100" y1="79"  x2="580" y2="79"  stroke="#00b4b4" stroke-width="0.6" opacity="0.55"/>
-                <line x1="160" y1="65"  x2="520" y2="65"  stroke="#00b4b4" stroke-width="0.5" opacity="0.4"/>
-                <line x1="215" y1="52"  x2="465" y2="52"  stroke="#00b4b4" stroke-width="0.5" opacity="0.28"/>
-                <line x1="265" y1="41"  x2="415" y2="41"  stroke="#00b4b4" stroke-width="0.5" opacity="0.18"/>
-                <line x1="308" y1="31"  x2="372" y2="31"  stroke="#00b4b4" stroke-width="0.5" opacity="0.1"/>
+                <!-- Horizontal lines — contained width matching original shape -->
+                <line x1="90"  y1="113" x2="590" y2="113" stroke="#00b4b4" stroke-width="0.7" opacity="0.7"/>
+                <line x1="140" y1="95"  x2="540" y2="95"  stroke="#00b4b4" stroke-width="0.6" opacity="0.6"/>
+                <line x1="190" y1="79"  x2="490" y2="79"  stroke="#00b4b4" stroke-width="0.55" opacity="0.48"/>
+                <line x1="235" y1="65"  x2="445" y2="65"  stroke="#00b4b4" stroke-width="0.5" opacity="0.36"/>
+                <line x1="275" y1="52"  x2="405" y2="52"  stroke="#00b4b4" stroke-width="0.5" opacity="0.24"/>
+                <line x1="308" y1="41"  x2="372" y2="41"  stroke="#00b4b4" stroke-width="0.5" opacity="0.15"/>
+                <line x1="326" y1="31"  x2="354" y2="31"  stroke="#00b4b4" stroke-width="0.5" opacity="0.08"/>
                 <!-- Vertical lines from vanishing point -->
-                <line x1="340" y1="22" x2="0"   y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.65"/>
-                <line x1="340" y1="22" x2="115" y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.55"/>
-                <line x1="340" y1="22" x2="225" y2="113" stroke="#00b4b4" stroke-width="0.5" opacity="0.45"/>
-                <line x1="340" y1="22" x2="340" y2="113" stroke="#00b4b4" stroke-width="0.5" opacity="0.35"/>
-                <line x1="340" y1="22" x2="455" y2="113" stroke="#00b4b4" stroke-width="0.5" opacity="0.45"/>
-                <line x1="340" y1="22" x2="565" y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.55"/>
-                <line x1="340" y1="22" x2="680" y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.65"/>
+                <line x1="340" y1="22" x2="90"  y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.65"/>
+                <line x1="340" y1="22" x2="175" y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.55"/>
+                <line x1="340" y1="22" x2="255" y2="113" stroke="#00b4b4" stroke-width="0.5" opacity="0.45"/>
+                <line x1="340" y1="22" x2="340" y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.55"/>
+                <line x1="340" y1="22" x2="425" y2="113" stroke="#00b4b4" stroke-width="0.5" opacity="0.45"/>
+                <line x1="340" y1="22" x2="505" y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.55"/>
+                <line x1="340" y1="22" x2="590" y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.65"/>
             </g>
 
 
@@ -185,7 +195,7 @@
             <div class="cv-corner"></div>
             <div class="cv-card-label">Format 02</div>
             <div class="cv-card-format">Word</div>
-            <div class="cv-card-desc">Editable .docx file<br>for HR systems.</div>
+            <div class="cv-card-desc">Editable .docx file</div>
             <a class="cv-download-btn" href="Jon_Huggins_CV.docx" download="Jon_Huggins_CV.docx">↓ Download DOCX</a>
         </div>
     </div>
@@ -199,6 +209,85 @@
         <span></span>
         <span></span>
     </div>
+    <div style="height: 80px;"></div>
+
+
+    <button id="chat-btn" onclick="toggleChat()">
+  <span style="font-size: 1.4em;">🤖</span> Ask Jonbot
+</button>
+
+    <div id="chat-panel">
+        <div id="chat-header">
+      Ask me anything
+      <button id="chat-close" onclick="toggleChat()">x</button>
+    </div>
+        <div id="chat-messages">
+            <div class="msg bot">Greetings - I'm Jonbot, transmitting from the Nova-Z9 system. Go ahead - ask me
+                anything about Jon!</div>
+        </div>
+        <div id="chat-input-row">
+            <input id="chat-input" type="text" placeholder="Type a message…"
+                onkeydown="if(event.key==='Enter') sendMsg()" />
+            <button id="chat-send" onclick="sendMsg()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const SYSTEM_PROMPT = `You are a helpful assistant on a developer portfolio website. Answer questions about their work, skills, and projects. Be friendly and concise.`;
+
+        const history = [];
+
+        function toggleChat() {
+            document.getElementById('chat-panel').classList.toggle('open');
+        }
+
+        async function sendMsg() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+            input.value = '';
+
+            addMessage(text, 'user');
+            history.push({ role: 'user', content: text });
+
+            const thinking = addMessage('…', 'bot');
+
+            try {
+                const res = await fetch('https://chat.jonhuggins.nz', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        model: 'deepseek-chat',
+                        messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...history]
+                    })
+                });
+                const data = await res.json();
+                console.log(data);
+                const reply = data.choices[0].message.content;
+                history.push({ role: 'assistant', content: reply });
+                thinking.textContent = reply;
+            } catch (e) {
+                thinking.textContent = e.message;
+            }
+        }
+
+        function addMessage(text, who) {
+            const el = document.createElement('div');
+            el.className = `msg ${who}`;
+            el.textContent = text;
+            const msgs = document.getElementById('chat-messages');
+            msgs.appendChild(el);
+            msgs.scrollTop = msgs.scrollHeight;
+            return el;
+        }
+    </script>
+
+
 </body>
+
+
+
+
+
 
 </html>
