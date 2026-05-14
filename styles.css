@@ -254,12 +254,11 @@ form textarea:focus {
     box-shadow:
         0 0 6px #18ffff,
         0 0 12px #00e5ff;
-}
-
-form input:focus,
-form textarea:focus {
     caret-color: #18ffff;
-}
+
+    }
+
+
 
 form {
     overscroll-behavior: none;
@@ -432,7 +431,7 @@ body::after {
     background: rgba(0, 180, 180, 0.2);
 }
 
-/* Diamonds are a girl's beset friend */
+/* Diamonds are forever */
 .side-panel span {
     width: 8px;
     height: 8px;
@@ -659,20 +658,11 @@ body::after {
         width: 35px;
     }
 
-    form input,
-    form textarea {
-        width: 90%;
-    }
-
     h1 {
         font-size: 1.7em;
     }
 
     .cover-url {
-        display: none;
-    }
-
-    .side-panel {
         display: none;
     }
 
