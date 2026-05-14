@@ -1,9 +1,14 @@
-# My Website
+# jonhuggins.nz
 
-## Workflow
+Personal portfolio site for Jon Huggins.
 
-Make changes in VS Code, then:
+Built with vanilla HTML, CSS and JavaScript. Hosted on GitHub Pages with a 
+custom domain managed through Cloudflare.
 
-git add .
-git commit -m "[describe change here]"
-git push
+Features a Cloudflare Worker backend powering a chat assistant (Jonbot), 
+a Cal.com booking integration, and a Formspree contact form.
+
+---
+
+*"The beginning of knowledge is the discovery of something we do not understand."*
+– Frank Herbert, God Emperor of Dune
