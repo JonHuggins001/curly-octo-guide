@@ -270,15 +270,6 @@ p {
     margin-bottom: 1.5em;
 }
 
-.social-link {
-    text-decoration: none;
-}
-
-.social-link:hover {
-    text-decoration: none;
-    color: #ffffff;
-}
-
 body.cover {
     max-width: 100%;
     min-height: 100vh;
@@ -560,6 +551,27 @@ body::after {
 .cv-grid-divider svg {
     display: block;
     width: 100%;
+}
+
+.dropbox-btn {
+    display: inline-block;
+    margin: 0.75rem 0 1.5rem;
+    border-radius: 6px;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid #00b4b4;
+    background: #1E1E1E;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dropbox-btn:hover {
+    border-color: #18ffff;
+    box-shadow: 0 0 8px #18ffff, 0 0 16px #00e5ff;
+    color: #00b4b4;
 }
 
 @media (max-width: 1360px) and (min-width: 769px) {
