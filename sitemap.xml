@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- jonhuggins.nz sitemap -->
 <url>
   <loc>https://jonhuggins.nz/</loc>
-  <lastmod>2026-05-14T23:58:00+12:00</lastmod> <!--Two... minutes, ... to miiiiidnight-->
+  <lastmod>2026-05-14T23:58:00+12:00</lastmod> <!--Two... minutes, ...to miiiiidnight-->
   <priority>1.00</priority>
 </url>
 <url>
@@ -38,20 +32,8 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://jonhuggins.nz/booking.html</loc>
-  <lastmod>2026-05-14T23:58:00+12:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://jonhuggins.nz/contact.html</loc>
   <lastmod>2026-05-14T23:58:00+12:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://jonhuggins.nz/index.html</loc>
-  <lastmod>2026-05-14T23:58:00+12:00</lastmod> 
-  <priority>0.64</priority>
-</url>
-
-
 </urlset>
