@@ -100,12 +100,11 @@
 
         .cv-note {
             font-size: 0.8em;
-            color: #555;
+            color: #a0a0a0;
             font-family: "Courier New", monospace;
             letter-spacing: 0.05em;
             border-left: 2px solid #00b4b4;
             padding-left: 1rem;
-            opacity: 0.75;
         }
 
         .cv-grid-divider {
@@ -117,30 +116,6 @@
         .cv-grid-divider svg {
             display: block;
             width: 100%;
-        }
-
-        .scanline {
-            animation: scan 3s ease-in-out infinite;
-        }
-
-        @keyframes scan {
-            0%   { transform: translateX(-340px); opacity: 0; }
-            10%  { opacity: 1; }
-            90%  { opacity: 1; }
-            100% { transform: translateX(340px); opacity: 0; }
-        }
-
-        .cv-blink {
-            animation: cvblink 2s step-start infinite;
-        }
-
-        @keyframes cvblink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.2; }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .scanline, .cv-blink { animation: none; }
         }
     </style>
 </head>
@@ -161,38 +136,39 @@
     <h1>CV</h1>
     <hr>
 
-    <p>A single-page summary of my experience, education and skills — available in either pdf or word.</p>
+    <p>A single-page summary of my experience, education and skills — available in two formats depending on what's useful to you.</p>
 
     <div class="cv-grid-divider">
-        <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 680 115" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <clipPath id="grid-clip">
-                    <rect x="0" y="0" width="680" height="100"/>
+                    <rect x="0" y="0" width="680" height="115"/>
                 </clipPath>
             </defs>
-            <g clip-path="url(#grid-clip)">
-                <!-- Perspective horizontal lines -->
-                <line x1="90" y1="98" x2="590" y2="98" stroke="#00b4b4" stroke-width="0.5" opacity="0.5"/>
-                <line x1="140" y1="78" x2="540" y2="78" stroke="#00b4b4" stroke-width="0.5" opacity="0.4"/>
-                <line x1="195" y1="61" x2="485" y2="61" stroke="#00b4b4" stroke-width="0.5" opacity="0.3"/>
-                <line x1="250" y1="46" x2="430" y2="46" stroke="#00b4b4" stroke-width="0.5" opacity="0.22"/>
-                <line x1="300" y1="33" x2="380" y2="33" stroke="#00b4b4" stroke-width="0.5" opacity="0.14"/>
-                <line x1="320" y1="23" x2="360" y2="23" stroke="#00b4b4" stroke-width="0.5" opacity="0.08"/>
-                <!-- Perspective vertical lines -->
-                <line x1="340" y1="10" x2="90"  y2="98" stroke="#00b4b4" stroke-width="0.5" opacity="0.35"/>
-                <line x1="340" y1="10" x2="175" y2="98" stroke="#00b4b4" stroke-width="0.5" opacity="0.3"/>
-                <line x1="340" y1="10" x2="255" y2="98" stroke="#00b4b4" stroke-width="0.5" opacity="0.25"/>
-                <line x1="340" y1="10" x2="340" y2="98" stroke="#00b4b4" stroke-width="0.5" opacity="0.2"/>
-                <line x1="340" y1="10" x2="425" y2="98" stroke="#00b4b4" stroke-width="0.5" opacity="0.25"/>
-                <line x1="340" y1="10" x2="505" y2="98" stroke="#00b4b4" stroke-width="0.5" opacity="0.3"/>
-                <line x1="340" y1="10" x2="590" y2="98" stroke="#00b4b4" stroke-width="0.5" opacity="0.35"/>
-                
-                
-            </g>
-            
+
             <!-- Label -->
-            <text x="340" y="10" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#00b4b4" opacity="0.4" letter-spacing="4">SELECT FORMAT</text>
-           
+            <text x="340" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#00b4b4" opacity="0.85" letter-spacing="5">SELECT FORMAT</text>
+
+            <g clip-path="url(#grid-clip)">
+                <!-- Horizontal lines -->
+                <line x1="0"   y1="113" x2="680" y2="113" stroke="#00b4b4" stroke-width="1"   opacity="0.9"/>
+                <line x1="40"  y1="95"  x2="640" y2="95"  stroke="#00b4b4" stroke-width="0.7" opacity="0.7"/>
+                <line x1="100" y1="79"  x2="580" y2="79"  stroke="#00b4b4" stroke-width="0.6" opacity="0.55"/>
+                <line x1="160" y1="65"  x2="520" y2="65"  stroke="#00b4b4" stroke-width="0.5" opacity="0.4"/>
+                <line x1="215" y1="52"  x2="465" y2="52"  stroke="#00b4b4" stroke-width="0.5" opacity="0.28"/>
+                <line x1="265" y1="41"  x2="415" y2="41"  stroke="#00b4b4" stroke-width="0.5" opacity="0.18"/>
+                <line x1="308" y1="31"  x2="372" y2="31"  stroke="#00b4b4" stroke-width="0.5" opacity="0.1"/>
+                <!-- Vertical lines from vanishing point -->
+                <line x1="340" y1="22" x2="0"   y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.65"/>
+                <line x1="340" y1="22" x2="115" y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.55"/>
+                <line x1="340" y1="22" x2="225" y2="113" stroke="#00b4b4" stroke-width="0.5" opacity="0.45"/>
+                <line x1="340" y1="22" x2="340" y2="113" stroke="#00b4b4" stroke-width="0.5" opacity="0.35"/>
+                <line x1="340" y1="22" x2="455" y2="113" stroke="#00b4b4" stroke-width="0.5" opacity="0.45"/>
+                <line x1="340" y1="22" x2="565" y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.55"/>
+                <line x1="340" y1="22" x2="680" y2="113" stroke="#00b4b4" stroke-width="0.6" opacity="0.65"/>
+            </g>
+
+
         </svg>
     </div>
 
@@ -209,7 +185,7 @@
             <div class="cv-corner"></div>
             <div class="cv-card-label">Format 02</div>
             <div class="cv-card-format">Word</div>
-            <div class="cv-card-desc">Editable .docx file</div>
+            <div class="cv-card-desc">Editable .docx file<br>for HR systems.</div>
             <a class="cv-download-btn" href="Jon_Huggins_CV.docx" download="Jon_Huggins_CV.docx">↓ Download DOCX</a>
         </div>
     </div>
