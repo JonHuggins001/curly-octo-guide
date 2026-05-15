@@ -576,6 +576,7 @@ body::after {
     color: #00b4b4;
 }
 
+/* Here I am, stuck in the middle with you */
 @media (max-width: 1360px) and (min-width: 769px) {
     .side-logo {
         opacity: 0;
@@ -595,8 +596,7 @@ body::after {
     }
 }
 
-/*  Mobile mode.
-    For them dopamine chasers. */
+/*  Don't leave me hanging on the telephone */
 
 @media (max-width: 768px) {
 
