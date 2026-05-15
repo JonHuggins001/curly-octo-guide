@@ -347,7 +347,7 @@ body.cover {
     letter-spacing: 0.15em;
 }
  
-/* It's curtain time and away we go, another opening another show */
+/* It's just a jump to the left */
 .cover-tagline {
     font-family: "Courier New", monospace;
     margin-top: 0.8rem;
@@ -696,6 +696,6 @@ body::after {
     Madness ... takes its toll
     But listen closely
     (Not for very much longer)
-    I've got to ... keep control...
+    **I'VE** got to ... keep control
     ================================= */
 
