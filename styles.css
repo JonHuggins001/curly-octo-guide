@@ -577,6 +577,21 @@ body::after {
 }
 
 /* Who ya gonna call? */
+.venkman-section hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, #00b4b4, transparent);
+    margin-top: 2rem;
+}
+
+.venkman-section p {
+    margin-bottom: 0.4rem;
+    color: #c8c8c8;
+    opacity: 0.85;
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
 
 .venkman-btn {
     display: inline-block;
@@ -590,7 +605,7 @@ body::after {
     text-decoration: none;
     border-radius: 8px;
     background: radial-gradient(ellipse at center, rgba(0,180,180,0.25) 0%, rgba(0,180,180,0.02) 100%);
-    margin: 2rem 0 1.5rem;
+    margin: 0 0 1.5rem;
     transition: all 0.2s ease;
 }
 
