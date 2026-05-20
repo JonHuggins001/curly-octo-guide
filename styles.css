@@ -581,18 +581,17 @@ body::after {
     border: none;
     height: 1px;
     background: linear-gradient(to right, #00b4b4, transparent);
-    margin-top: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
 }
 
 .venkman-section p {
-    margin-bottom: 0.4rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
     color: #c8c8c8;
-    opacity: 0.85;
-    font-size: 0.85em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    
+    font-size: 1em;
 }
-
 .venkman-btn {
     display: inline-block;
     border: 1px solid #00b4b4;
