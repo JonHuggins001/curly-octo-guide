@@ -729,6 +729,13 @@ body::after {
     }
 }
 
+@media (max-width: 405px) {
+    .venkman-btn {
+        text-align: center;
+        display: block;
+    }
+}
+
 /*  ================================= 
     It's astounding, time is fleeting
     Madness ... takes its toll
