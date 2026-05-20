@@ -577,27 +577,27 @@ body::after {
 }
 
 /* Who ya gonna call? */
+
 .venkman-btn {
     display: inline-block;
     border: 1px solid #00b4b4;
-    color: #00b4b4;
+    color: #18ffff;
     padding: 10px 22px;
     font-family: "Courier New", monospace;
     font-size: 0.85em;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     text-decoration: none;
+    border-radius: 8px;
+    background: radial-gradient(ellipse at center, rgba(0,180,180,0.25) 0%, rgba(0,180,180,0.02) 100%);
     margin: 2rem 0 1.5rem;
     transition: all 0.2s ease;
 }
 
 .venkman-btn:hover {
     color: #0d0d0f;
-    background-color: #00b4b4;
-    text-shadow: none;
-    box-shadow:
-        0 0 10px rgba(0, 180, 180, 0.4),
-        0 0 20px rgba(0, 229, 255, 0.2);
+    background: #00b4b4;
+    box-shadow: 0 0 10px rgba(0,180,180,0.4), 0 0 20px rgba(0,229,255,0.2);
 }
 
 /* Here I am, stuck in the middle with you */
