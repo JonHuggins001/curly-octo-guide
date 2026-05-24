@@ -576,6 +576,17 @@ body::after {
     color: #00b4b4;
 }
 
+.gradient-hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #00b4b4, transparent);
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.gradient-hr {
+  --hr-direction: to right;
+  background: linear-gradient(var(--hr-direction), #00b4b4, transparent);
+}
 /* Who ya gonna call? */
 .venkman-section hr {
     border: none;
