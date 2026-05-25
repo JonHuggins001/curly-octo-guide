@@ -1,68 +1,86 @@
 .availability-notice {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border: 1px solid #00b4b4;
-  border-top: 2px solid #00b4b4;
-  background: #0d0d0f;
-  border-radius: 4px;
-  padding: 0.85rem 1.2rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #00b4b4;
+    border-top: 2px solid #00b4b4;
+    background: #0d0d0f;
+    border-radius: 4px;
+    padding: 0.85rem 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    font-family: 'Courier New', monospace;
 }
 
 .availability-notice::before,
 .availability-notice::after {
-  content: '';
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border-color: #00b4b4;
-  border-style: solid;
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: #00b4b4;
+    border-style: solid;
 }
-.availability-notice::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
-.availability-notice::after  { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+.availability-notice::before {
+    top: -1px;
+    left: -1px;
+    border-width: 2px 0 0 2px;
+}
+
+.availability-notice::after {
+    bottom: -1px;
+    right: -1px;
+    border-width: 0 2px 2px 0;
+}
 
 .notice-icon {
-  font-size: 2rem;
-  color: #00b4b4;
-  flex-shrink: 0;
+    font-size: 2rem;
+    color: #00b4b4;
+    flex-shrink: 0;
 }
 
 .notice-label {
-  display: block;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  color: #00b4b4;
-  margin-bottom: 0.2rem;
-  opacity: 0.7;
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: #00b4b4;
+    margin-bottom: 0.2rem;
+    opacity: 0.7;
 }
 
 .notice-text p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #c8c8c8;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #c8c8c8;
 }
 
 .notice-text strong {
-  color: #00b4b4;
+    color: #00b4b4;
 }
 
 .notice-dot {
-  width: 8px;
-  height: 8px;
-  background: #00b4b4;
-  border-radius: 50%;
-  margin-left: auto;
-  flex-shrink: 0;
-  animation: pulse 1.8s ease-in-out infinite;
+    width: 8px;
+    height: 8px;
+    background: #00b4b4;
+    border-radius: 50%;
+    margin-left: auto;
+    flex-shrink: 0;
+    animation: pulse 1.8s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.85; }
-  50% { opacity: 0.2; }
+
+    0%,
+    100% {
+        opacity: 0.85;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
 }
+
 /*  ====================
     IT'S ALIIIIIIVE!!!!! 
     (cackles sinisterly)
@@ -312,7 +330,6 @@ form button:hover {
         0 0 16px #00e5ff;
 }
 
-
 form input:focus,
 form textarea:focus {
     outline: none;
@@ -321,11 +338,22 @@ form textarea:focus {
         0 0 6px #18ffff,
         0 0 12px #00e5ff;
     caret-color: #18ffff;
-
 }
 
 form {
     overscroll-behavior: none;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1em;
+    margin-bottom: 1.5em;
 }
 
 p {
@@ -411,7 +439,7 @@ body.cover {
     font-size: 11px;
     letter-spacing: 0.15em;
 }
- 
+
 /* It's just a jump! to the left - and then a step to the riiiiight */
 .cover-tagline {
     font-family: "Courier New", monospace;
@@ -626,7 +654,8 @@ body::after {
     border-radius: 6px;
     padding: 0.5rem 1.25rem;
     border: 1px solid #00b4b4;
-    background: #1E1E1E;
+    background: #0d0d0f;
+    color: #00b4b4;
     font-size: 0.8rem;
     letter-spacing: 0.08em;
     text-decoration: none;
@@ -636,22 +665,27 @@ body::after {
 }
 
 .dropbox-btn:hover {
-    border-color: #18ffff;
-    box-shadow: 0 0 8px #18ffff, 0 0 16px #00e5ff;
+    border-color: #00b4b4;
+    box-shadow: 0 0 8px #00b4b4, 0 0 16px #00b4b4;
     color: #00b4b4;
 }
 
+
+
+
 .gradient-hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(to right, #00b4b4, transparent);
-  margin-top: 3rem;
-  margin-bottom: 4rem;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, #00b4b4, transparent);
+    margin-top: 3rem;
+    margin-bottom: 4rem;
 }
+
 .gradient-hr {
-  --hr-direction: to right;
-  background: linear-gradient(var(--hr-direction), #00b4b4, transparent);
+    --hr-direction: to right;
+    background: linear-gradient(var(--hr-direction), #00b4b4, transparent);
 }
+
 /* Who ya gonna call? */
 .venkman-section hr {
     border: none;
@@ -665,9 +699,10 @@ body::after {
     margin-top: 0;
     margin-bottom: 2rem;
     color: #c8c8c8;
-    
+
     font-size: 1em;
 }
+
 .venkman-btn {
     display: inline-block;
     border: 1px solid #00b4b4;
@@ -679,7 +714,7 @@ body::after {
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 8px;
-    background: radial-gradient(ellipse at center, rgba(0,180,180,0.25) 0%, rgba(0,180,180,0.02) 100%);
+    background: radial-gradient(ellipse at center, rgba(0, 180, 180, 0.25) 0%, rgba(0, 180, 180, 0.02) 100%);
     margin: 0 0 1.5rem;
     transition: all 0.2s ease;
 }
@@ -687,7 +722,7 @@ body::after {
 .venkman-btn:hover {
     color: #0d0d0f;
     background: #00b4b4;
-    box-shadow: 0 0 10px rgba(0,180,180,0.4), 0 0 20px rgba(0,229,255,0.2);
+    box-shadow: 0 0 10px rgba(0, 180, 180, 0.4), 0 0 20px rgba(0, 229, 255, 0.2);
     font-weight: bold;
 }
 
@@ -821,4 +856,3 @@ body::after {
     (Not for very much longer)
     **I'VE** got to ... keep control
     ================================= */
-
