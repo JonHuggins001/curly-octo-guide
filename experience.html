@@ -1,0 +1,98 @@
+<!-- Know then that it is the year Two Thousand Twenty Six, during the fifth turn of the lesser moon, that this page was last modified by JH -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:image" content="https://jonhuggins.nz/cyber_cat.png">
+    <meta property="og:title" content="Experience | Jon Huggins">
+    <meta property="og:url" content="https://jonhuggins.nz/experience.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seeking the purr-fect fit for meaningful work and continuous learning.
+Accounts/admin background. Growing technical toolkit. Mild cyberpunk tendencies. Have a look around: jonhuggins.nz">
+    <title>Experience | Jon Huggins</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://jonhuggins.nz/experience.html">
+</head>
+
+<body>
+    <img src="cldisintegrate.png" alt="Jon Huggins logo" class="side-logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html" style="font-weight: bold;">Experience</a>
+        <a href="skills.html">Skills</a>
+        <a href="cv.html">CV</a>
+        <a href="personal.html">Personal</a>
+        <a href="meet.html">Meet</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <h1>Experience</h1>
+    <hr>
+
+    <p><strong>Accounts Receivable Officer</strong> — Metlifecare <em>(Aug 2024 – Jun 2025)</em><br>
+        End to end accounts receivable, bank reconciliation, direct debit runs, billing,
+        credit control and customer queries in a large aged care organisation.</p>
+
+    <p><strong>Accounts Customer Service</strong> — Petcover <em>(Feb 2024 – Aug 2024)</em><br>
+        Accounts receivable combined with sales and customer support by phone and email
+        for a specialist pet insurance provider.</p>
+
+    <p><strong>Accounts Receivable / Office Manager</strong> — Radius Care <em>(Dec 2021 – Sep 2023)</em><br>
+        Two roles within the same organisation — accounts receivable at support office level,
+        preceded by office management at a care facility.</p>
+
+    <p><strong>Property Manager</strong> — Residence Balmoral <em>(Jul 2019 – Dec 2021)</em><br>
+        Sole charge management of a 102-unit residential building through a period that
+        included the Covid pandemic.</p>
+
+    <p><strong>Accounts Assistant</strong> — Harkness & Young <em>(Apr 2019 – Jun 2019)</em><br>
+        Accounts payable and receivable.</p>
+
+    <p><strong>Postal Worker</strong> — NZ Post / Freightways <em>(Apr 2006 – Mar 2019, with a break)</em><br>
+        Delivery rounds across Auckland, twice — bookending the years in Korea.</p>
+
+    <p><strong>English Teacher</strong> — Various schools, South Korea <em>(Apr 2008 – May 2015)</em><br>
+        Seven years teaching ESOL across three schools in South Korea, including the
+        government EPIK programme on Jeju Island.</p>
+
+    <p><strong>Case Manager</strong> — Ministry of Social Development <em>(Apr 2005 – Mar 2006)</em><br>
+        Front line case management for Work and Income New Zealand.</p>
+    <div class="side-panel">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div style="height: 80px;"></div>
+
+
+    <button id="chat-btn" onclick="toggleChat()">
+        <span style="font-size: 1.4em;">🤖</span> Ask Jonbot
+    </button>
+
+    <div id="chat-panel">
+        <div id="chat-header">
+            Ask me anything
+            <button id="chat-close" onclick="toggleChat()">x</button>
+        </div>
+        <div id="chat-messages">
+            <div class="msg bot">Greetings - I'm Jonbot, transmitting from the Nova-Z9 system. Go ahead - ask me
+                anything about Jon!</div>
+        </div>
+        <div id="chat-input-row">
+            <input id="chat-input" type="text" placeholder="Type a message…"
+                onkeydown="if(event.key==='Enter') sendMsg()" />
+            <button id="chat-send" onclick="sendMsg()">Send</button>
+        </div>
+    </div>
+
+    <script src="jonbot.js"></script>
+</body>
+
+</html>

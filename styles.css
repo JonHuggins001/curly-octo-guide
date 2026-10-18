@@ -1,0 +1,776 @@
+
+/*  ====================
+    IT'S ALIIIIIIVE!!!!! 
+    (cackles sinisterly)
+    ==================== */
+
+#chat-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: #0a0f1a;
+    color: #00b4b4;
+    border: 1px solid #00b4b4;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    z-index: 9999;
+    font-family: "Orbitron", monospace;
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease;
+}
+
+#chat-btn:hover {
+    background-color: #00b4b4;
+    color: #0d0d0f;
+    box-shadow:
+        0 0 8px #18ffff,
+        0 0 16px #00e5ff;
+    transform: scale(1.05);
+}
+
+#chat-panel {
+    position: fixed;
+    bottom: 90px;
+    right: 28px;
+    width: 340px;
+    height: 480px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+    display: none;
+    flex-direction: column;
+    font-family: system-ui, sans-serif;
+    z-index: 9999;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+
+#chat-panel.open {
+    display: flex;
+}
+
+#chat-header {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 14px 18px;
+    font-weight: 600;
+    font-size: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chat-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+#chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.msg {
+    max-width: 85%;
+    padding: 9px 13px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.msg.user {
+    background: #1a1a2e;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.msg.bot {
+    background: #f3f4f6;
+    color: #111;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+#chat-input-row {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+    border-top: 1px solid #e5e7eb;
+}
+
+#chat-input {
+    flex: 1;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+#chat-send {
+    background: #1a1a2e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/*  ===========================
+    JONBOT EATS SHOOTS & LEAVES 
+    =========================== */
+
+
+body {
+    max-width: 750px;
+    margin: auto;
+    font-family: "Courier New", monospace;
+    padding: 20px 20px 20px 80px;
+    background-color: #1c2333;
+    color: #c8c8c8;
+}
+
+/* Nifty navvy nimbly navigates neon nav nodes nightly */
+
+nav {
+    border-top: 2px solid #00b4b4;
+    border-bottom: 2px solid #00b4b4;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+/* You can glow your own way */
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #00b4b4;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+nav a:hover {
+    color: #18ffff;
+    text-shadow:
+        0 0 6px #18ffff,
+        0 0 12px #00e5ff;
+}
+
+h1 {
+    font-family: "Courier New", monospace;
+    font-size: 2.5em;
+    color: #00b4b4;
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* I can catch the moon in my hands; Don't you know who I am?; Remember my name */
+h2 {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 1.4em;
+    color: #00b4b4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #00b4b4;
+    padding-bottom: 4px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #00b4b4;
+    margin: 20px 0;
+}
+
+a {
+    color: #00b4b4;
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+    color: #18ffff;
+    text-decoration: none;
+    text-shadow:
+        0 0 6px #18ffff,
+        0 0 12px #00e5ff;
+}
+
+/* This is Major Tom to ground control */
+
+form input,
+form textarea {
+    background-color: #0d0d0f;
+    color: #ffffff;
+    border: 1px solid #00b4b4;
+    padding: 10px;
+    width: 100%;
+    font-family: inherit;
+    margin-top: 5px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form button {
+    background-color: #00b4b4;
+    color: #0d0d0f;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Racing Sans One", sans-serif;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+form button:hover {
+    background-color: #18ffff;
+    box-shadow:
+        0 0 8px #18ffff,
+        0 0 16px #00e5ff;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #18ffff;
+    box-shadow:
+        0 0 6px #18ffff,
+        0 0 12px #00e5ff;
+    caret-color: #18ffff;
+}
+
+form {
+    overscroll-behavior: none;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+
+body.cover {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-image: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 180, 180, 0.03) 2px,
+            rgba(0, 180, 180, 0.03) 4px);
+}
+
+/* Welcome to the Jon-gle */
+
+.cover-wrap {
+    text-align: center;
+    padding: 2rem;
+}
+
+.cover-url {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00b4b4;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.cover-name-first {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: clamp(2rem, 7vw, 4.5rem);
+    color: #00b4b4;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.cover-name-last {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: clamp(2rem, 10vw, 4.5rem);
+    color: #c8c8c8;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.cover-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    border: none;
+    padding: 0;
+    margin-top: 7rem !important;
+    margin-bottom: 2.5rem;
+}
+
+.cover-nav a {
+    font-size: 17px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Hello, Dotty! */
+.cover-dots {
+    color: #00b4b4;
+    opacity: 0.4;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+}
+
+/* It's just a jump! to the left - and then a step to the riiiiight */
+.cover-tagline {
+    font-family: "Courier New", monospace;
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
+    color: #18ffff;
+    font-size: 1.5rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+/* It's hip to be square */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+        repeating-linear-gradient(0deg,
+            transparent,
+            transparent 40px,
+            rgba(0, 180, 180, 0.06) 40px,
+            rgba(0, 180, 180, 0.06) 41px),
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 40px,
+            rgba(0, 180, 180, 0.06) 40px,
+            rgba(0, 180, 180, 0.06) 41px);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 66px;
+    pointer-events: none;
+    z-index: 999;
+    background: repeating-linear-gradient(to bottom,
+            #00b4b4 0px,
+            #00b4b4 10px,
+            transparent 10px,
+            transparent 24px);
+    opacity: 0.3;
+}
+
+.side-panel {
+    position: fixed;
+    right: 7px;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    z-index: 999;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.side-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: rgba(0, 180, 180, 0.2);
+}
+
+/* Diamonds are forever */
+.side-panel span {
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(0, 180, 180, 0.5);
+    transform: rotate(45deg);
+    display: block;
+    z-index: 1;
+    background: #1c2333;
+}
+
+/* Your wish is my CLI */
+.side-logo {
+    position: fixed;
+    left: -40px;
+    top: -60px;
+    width: 500px;
+    opacity: 0.85;
+    z-index: 999;
+    pointer-events: none;
+    transition: opacity 0.6s ease, filter 0.6s ease, transform 0.6s ease;
+}
+
+/* "Beam me down, Scotty", requested the restless resume */
+
+.cv-download-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.cv-card {
+    border: 1px solid #00b4b4;
+    padding: 1.8rem 2rem;
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    text-align: left;
+}
+
+.cv-card:hover {
+    border-color: #18ffff;
+    box-shadow:
+        0 0 10px rgba(24, 255, 255, 0.15),
+        0 0 30px rgba(0, 229, 255, 0.08);
+}
+
+.cv-card-label {
+    font-family: "Courier New", monospace;
+    font-size: 0.72em;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #00b4b4;
+    margin-bottom: 0.4rem;
+    opacity: 0.7;
+}
+
+.cv-card-format {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 2rem;
+    color: #00b4b4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0.6rem;
+}
+
+.cv-card-desc {
+    font-size: 0.82em;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 1.4rem;
+    font-family: "Courier New", monospace;
+}
+
+.cv-download-btn {
+    display: inline-block;
+    border: 1px solid #00b4b4;
+    color: #00b4b4;
+    padding: 8px 20px;
+    font-family: "Courier New", monospace;
+    font-size: 0.8em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.cv-download-btn:hover {
+    color: #0d0d0f;
+    background-color: #00b4b4;
+    text-shadow: none;
+    box-shadow:
+        0 0 10px rgba(0, 180, 180, 0.4),
+        0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+.cv-corner {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 14px;
+    height: 14px;
+    border-top: 2px solid #00b4b4;
+    border-right: 2px solid #00b4b4;
+}
+
+.cv-note {
+    font-size: 0.8em;
+    color: #a0a0a0;
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.05em;
+    border-left: 2px solid #00b4b4;
+    padding-left: 1rem;
+}
+
+.cv-grid-divider {
+    width: 100%;
+    margin: 1.5rem 0 0.5rem;
+    overflow: hidden;
+}
+
+.cv-grid-divider svg {
+    display: block;
+    width: 100%;
+}
+
+/* Beauty school dropout */
+.dropbox-btn {
+    display: inline-block;
+    margin: 0.75rem 0 1.5rem;
+    border-radius: 6px;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid #00b4b4;
+    background: #0d0d0f;
+    color: #00b4b4;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dropbox-btn:hover {
+    border-color: #00b4b4;
+    box-shadow: 0 0 8px #00b4b4, 0 0 16px #00b4b4;
+    color: #00b4b4;
+}
+
+
+
+
+.gradient-hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, #00b4b4, transparent);
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.gradient-hr {
+    --hr-direction: to right;
+    background: linear-gradient(var(--hr-direction), #00b4b4, transparent);
+}
+
+/* Who ya gonna call? */
+.venkman-section hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, #00b4b4, transparent);
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.venkman-section p {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #c8c8c8;
+
+    font-size: 1em;
+}
+
+.venkman-btn {
+    display: inline-block;
+    border: 1px solid #00b4b4;
+    color: #18ffff;
+    padding: 10px 22px;
+    font-family: "Courier New", monospace;
+    font-size: 0.85em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    background: radial-gradient(ellipse at center, rgba(0, 180, 180, 0.25) 0%, rgba(0, 180, 180, 0.02) 100%);
+    margin: 0 0 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.venkman-btn:hover {
+    color: #0d0d0f;
+    background: #00b4b4;
+    box-shadow: 0 0 10px rgba(0, 180, 180, 0.4), 0 0 20px rgba(0, 229, 255, 0.2);
+    font-weight: bold;
+}
+
+
+/* Here I am, stuck in the middle with you */
+@media (max-width: 1360px) and (min-width: 769px) {
+    .side-logo {
+        opacity: 0;
+        filter: blur(8px) drop-shadow(0 0 12px #18ffff);
+        transform: scale(0.95);
+    }
+}
+
+@media (max-width: 950px) {
+    .side-panel {
+        display: none;
+    }
+
+    form input,
+    form textarea {
+        width: 90%;
+    }
+}
+
+/*  Don't leave me hanging on the telephone */
+
+@media (max-width: 768px) {
+
+    body.no-mobile-chat #chat-btn,
+    body.no-mobile-chat #chat-panel {
+        display: none
+    }
+
+    #chat-btn {
+        position: fixed;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 8px;
+        width: 65%;
+        text-align: center;
+    }
+
+    #chat-panel {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        border-radius: 16px 16px 0 0;
+    }
+
+    #chat-btn:hover {
+        transform: translateX(-50%) scale(1.05);
+    }
+
+    body.cover {
+        align-items: flex-start;
+        padding-top: 3rem;
+    }
+
+    .side-logo {
+        display: none;
+    }
+
+    .cover-nav a {
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+    }
+
+    .cover-nav {
+        gap: 1.2rem;
+        margin-top: 4rem !important;
+    }
+
+    .cover-tagline {
+        display: none;
+    }
+
+    .cover-wrap {
+        padding: 0.5rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 0;
+    }
+
+    nav a {
+        margin-right: 10px;
+        font-size: 0.8em;
+    }
+
+    body::after {
+        width: 35px;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+
+    .cover-url {
+        display: none;
+    }
+
+    .cover-dots {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .cv-grid-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 405px) {
+    .venkman-btn {
+        text-align: center;
+        display: block;
+    }
+}
+
+/*  ================================= 
+    It's astounding, time is fleeting
+    Madness ... takes its toll
+    But listen closely
+    (Not for very much longer)
+    **I'VE** got to ... keep control
+    ================================= */
